@@ -1,0 +1,24 @@
+{
+  "name": "bauhaus",
+  "authors": [
+    "sagsoz06 <designer@visualturk.net>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.nicescroll": "nicescroll#^3.7.6",
+    "owl.carousel": "2.2.1",
+    "lightgallery": "^1.6.7",
+    "jssocials": "^1.5.0"
+  }
+}
