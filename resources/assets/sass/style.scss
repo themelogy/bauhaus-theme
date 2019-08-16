@@ -1317,20 +1317,18 @@ a.brand {
     bottom: 6rem;
     padding: 0 2rem 0 0;
     font-size: 1.8rem;
+    z-index: 3;
   }
 
   .project-cat {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     right: 3rem;
-    bottom: 0;
+    top: 0;
     font-size: 14px;
     letter-spacing: -0.01em;
-    color: $default-theme-color;
-    -webkit-transition: none;
-    -o-transition: none;
-    transition: none;
-
+    color: white;
+    @include text-shadow(0,0,5px,rgba(0,0,0,0.50));
     &:after {
       content: "";
       position: absolute;
@@ -1339,8 +1337,9 @@ a.brand {
       right: -3rem;
       bottom: 0.5rem;
       display: block;
-      background-color: $default-theme-color;
+      background-color: white;
       z-index: 2;
+      @include text-shadow(0,0,5px,rgba(0,0,0,0.50));
     }
   }
 }
@@ -1371,6 +1370,17 @@ a.brand {
       -webkit-transition: transform 0.5s ease;
       -o-transition: transform 0.5s ease;
       transition: transform 0.5s ease;
+    }
+
+    .project-cat {
+      color: #000;
+      @include text-shadow(0,0,0);
+      &::after {
+        background-color: #000;
+      }
+      a:hover {
+        color:white;
+      }
     }
 
     .project-description {

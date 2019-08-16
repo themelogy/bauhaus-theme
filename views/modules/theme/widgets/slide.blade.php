@@ -10,8 +10,8 @@
                 <img data-lazyload="{{ $slide->present()->firstImage(1920,1080,'fit',95) }}" data-bgparallax="5"  alt="{{ $slide->title }}" data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
 
                 <div class="slider-title tp-caption tp-resizeme category" style="padding: 20px 0;"
-                     data-x="['left']" data-hoffset="['250', '50']"
-                     data-y="['middle','middle','middle','middle']" data-voffset="['50']"
+                     data-x="['left']" data-hoffset="['250', '250','250','50']"
+                     data-y="['middle','middle','middle','middle']" data-voffset="['30']"
                      data-textAlign="['left']"
                      data-fontsize="['80', '75','70','65']"
                      data-lineheight="['75','70', '65','60']"
@@ -33,10 +33,10 @@
 
                 <!-- Layer 6 -->
                 <div class="slider-title tp-caption proje"
-                     data-x="['left']" data-hoffset="['255', '50']"
-                     data-y="['middle','middle','middle','middle']" data-voffset="['175']"
+                     data-x="['left']" data-hoffset="['250', '250','250','50']"
+                     data-y="['middle','middle','middle','middle']" data-voffset="['155']"
                      data-textAlign="['left']"
-                     data-fontsize="['18']"
+                     data-fontsize="['17']"
                      data-lineheight="['20']"
                      data-height="none"
                      data-whitespace="nowrap"
@@ -49,7 +49,7 @@
                      data-splitin="none"
                      data-splitout="none"
                      data-responsive_offset="on"
-                     data-elementdelay="0.05"><a href="{{ $slide->present()->link->url }}" class="link-arrow">{!! $slide->title !!} <i class="icon ion-ios-arrow-thin-right"></i></a>
+                     data-elementdelay="0.05"><a href="{{ $slide->present()->link->url }}" class="link-arrow" style="font-weight: 300">{{ $slide->title }}</a>
                 </div>
             </li>
             @endforeach

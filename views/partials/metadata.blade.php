@@ -11,8 +11,4 @@
 <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
 
 @stack('head-styles')
-@if(App::environment()=='local')
-    {!! Theme::style("css/style.css") !!}
-@else
-    <link rel="stylesheet" href="{{ elixir('css/style.min.css', 'themes/bauhaus') }}" />
-@endif
+{!! Theme::style("css/style.css") !!}

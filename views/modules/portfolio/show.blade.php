@@ -19,10 +19,12 @@
                     <div class="col-md-12">
                         <div class="project-detail">
                             <h1 class="title h-line md-m-bot-50">{{ $portfolio->title }}</h1>
-                            @if($brandImage = $portfolio->present()->brandImage(null,50,'resize',100))
+                            @if($portfolio->brand()->exists())
+                            @if($brandImage = $portfolio->brand->present()->firstImage(null,50,'resize',100))
                                 <div class="brand-image m-bot-20">
                                     <img src="{{ $brandImage }}" alt="{{ $portfolio->title }} Logo" />
                                 </div>
+                            @endif
                             @endif
                             @if(!empty($portfolio->description))
                                 <div class="description">{!! $portfolio->description !!}</div>
