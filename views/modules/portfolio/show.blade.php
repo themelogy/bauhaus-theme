@@ -20,7 +20,7 @@
                         <div class="project-detail">
                             <h1 class="title h-line md-m-bot-50">{{ $portfolio->title }}</h1>
                             @if($portfolio->brand()->exists())
-                            @if($brandImage = $portfolio->brand->present()->firstImage(null,50,'resize',100))
+                            @if($brandImage = $portfolio->brand->present()->firstImage(70,null,'resize',100))
                                 <div class="brand-image m-bot-20">
                                     <img src="{{ $brandImage }}" alt="{{ $portfolio->title }} Logo" />
                                 </div>
@@ -36,67 +36,67 @@
                             <ul class="detail-list">
                                 @if(!empty(@$portfolio->settings->location))
                                     <li class="row">
-                                        <span class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.location') }}</span>
-                                        <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span> {!! nl2br($portfolio->settings->location) !!}</span>
+                                        <div class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.location') }}<span class="hidden-xs">:</span></div>
+                                        <div class="col-md-10 col-xs-12">{!! nl2br($portfolio->settings->location) !!}</div>
                                     </li>
                                 @endif
                                 <li class="row">
-                                    <span class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.year') }}</span>
-                                    <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span> {{ $portfolio->start_at->formatLocalized('%Y') }}</span>
+                                    <div class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.year') }}<span class="hidden-xs">:</span></div>
+                                    <div class="col-md-10 col-xs-12">{{ $portfolio->start_at->formatLocalized('%Y') }}</div>
                                 </li>
                                 @if($portfolio->categories()->exists())
                                     <li class="row">
-                                        <span class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.category') }}</span>
-                                        <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span>
+                                        <div class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.category') }}<span class="hidden-xs">:</span></div>
+                                        <div class="col-md-10 col-xs-12">
                                             {!! $portfolio->categories->map(function($category){
                                                     $link = '<a class="label label-info" href="'.$category->url.'">'.$category->title.'</a>';
                                                     return $link;
                                                 })->implode(' ') !!}
-                                        </span>
+                                        </div>
                                     </li>
                                 @endif
                                 @if(!empty(@$portfolio->settings->area_size))
                                     <li class="row">
-                                        <span class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.area_size') }} </span>
-                                        <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span> {{ $portfolio->settings->area_size }}</span>
+                                        <div class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.area_size') }}<span class="hidden-xs">:</span></div>
+                                        <div class="col-md-10 col-xs-12">{{ $portfolio->settings->area_size }}</div>
                                     </li>
                                 @endif
                                 @if(!empty(@$portfolio->settings->describe->tr))
                                     <li class="row">
-                                        <span class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.describe') }} </span>
-                                        <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span> {{ $portfolio->settings->describe->{locale()} }}</span>
+                                        <div class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.describe') }}<span class="hidden-xs">:</span></div>
+                                        <div class="col-md-10 col-xs-12">{{ $portfolio->settings->describe->{locale()} }}</div>
                                     </li>
                                 @endif
                                 @if(!empty(@$portfolio->settings->partner))
                                     <li class="row">
-                                        <span class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.partner') }} </span>
-                                        <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span> {{ $portfolio->settings->partner }}</span>
+                                        <div class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.partner') }}<span class="hidden-xs">:</span></div>
+                                        <div class="col-md-10 col-xs-12">{{ $portfolio->settings->partner }}</div>
                                     </li>
                                 @endif
                                 @if(!empty(@$portfolio->settings->employer->tr))
                                     <li class="row">
-                                        <span class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.employer') }} </span>
-                                        <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span> {{ $portfolio->settings->employer->{locale()} }}</span>
+                                        <div class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.employer') }}<span class="hidden-xs">:</span></div>
+                                        <div class="col-md-10 col-xs-12">{{ $portfolio->settings->employer->{locale()} }}</div>
                                     </li>
                                 @endif
                                 @if(!empty(@$portfolio->website))
                                     <li class="row">
-                                        <span class="col-md-2 text-bold col-xs-12">{{ trans('themes::portfolio.title.website') }} </span>
-                                        <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span> <a target="_blank" href="{{ $portfolio->website }}">{{ $portfolio->website }}</a> </span>
+                                        <div class="col-md-2 text-bold col-xs-12">{{ trans('themes::portfolio.title.website') }}<span class="hidden-xs">:</span></div>
+                                        <div class="col-md-10 col-xs-12"><a target="_blank" href="{{ $portfolio->website }}">{{ $portfolio->website }}</a> </div>v
                                     </li>
                                 @endif
                                 @if(!empty(@$portfolio->settings->video))
                                     <li class="row">
-                                        <span class="col-md-2 text-bold col-xs-12">{{ trans('themes::portfolio.title.video') }} </span>
-                                        <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span>
+                                        <div class="col-md-2 text-bold col-xs-12">{{ trans('themes::portfolio.title.video') }} </div>
+                                        <div class="col-md-10 col-xs-12"><span class="hidden-xs">:</span>
                                                 <a class="play-1 btn btn-bordered" href="{{ $portfolio->settings->video }}"><i class="fa fa-play"></i></a>
-                                            </span>
+                                            </div>
                                     </li>
                                 @endif
                                 @if(@$portfolio->present()->file)
                                     <li class="row">
-                                        <span class="col-md-2 text-bold col-xs-12">{{ trans('themes::portfolio.title.file') }} </span>
-                                        <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span> <a class="download-btn btn btn-bordered" target="_blank" href="{{ $portfolio->present()->file }}"><i class="fa fa-download"></i></a> </span>
+                                        <div class="col-md-2 text-bold col-xs-12">{{ trans('themes::portfolio.title.file') }} </div>
+                                        <div class="col-md-10 col-xs-12"><span class="hidden-xs">:</span> <a class="download-btn btn btn-bordered" target="_blank" href="{{ $portfolio->present()->file }}"><i class="fa fa-download"></i></a> </div>
                                     </li>
                                 @endif
                             </ul>

@@ -33,7 +33,7 @@
 
                 <!-- Layer 6 -->
                 <div class="slider-title tp-caption proje"
-                     data-x="['left']" data-hoffset="['250', '250','250','50']"
+                     data-x="['left']" data-hoffset="['255', '255','255','50']"
                      data-y="['middle','middle','middle','middle']" data-voffset="['155']"
                      data-textAlign="['left']"
                      data-fontsize="['17']"

@@ -9,6 +9,7 @@ return [
   ],
   'buttons' => [
       'all'     => 'Tümü',
-      'project' => 'Projeyi İncele'
+      'project' => 'Projeyi İncele',
+      'click for more information' => 'Detaylı Bilgi'
   ]
 ];
