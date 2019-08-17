@@ -17,7 +17,7 @@
             shareIn: "popup",
             showLabel: false,
             showCount: "inside",
-            shares: ["twitter", "facebook", "googleplus", "pinterest", "whatsapp"]
+            shares: ["twitter", "facebook", "pinterest", "whatsapp"]
         });
     });
 </script>

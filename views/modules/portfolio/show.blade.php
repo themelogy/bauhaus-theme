@@ -5,7 +5,7 @@
     <div class="content">
         <div class="resize-carousel-holder lightgallery">
             <div id="gallery_horizontal" class="owl-carousel owl-theme gallery_horizontal project-details">
-                @foreach($portfolio->present()->images(null,720,'resize',60) as $image)
+                @foreach($portfolio->present()->images(null,740,'resize',60,'watermark.png') as $image)
                     <div class="owl-item">
                         <a class="popup-image slider-zoom" data-src="{{ $image }}" data-sub-html="{{ $portfolio->title }}"><i class="fa fa-expand"></i></a>
                         <img class="owl-lazy" data-src="{{ $image }}" alt="{{ $portfolio->title }} {{ $loop->iteration }}"/>
@@ -37,7 +37,7 @@
                                 @if(!empty(@$portfolio->settings->location))
                                     <li class="row">
                                         <span class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.location') }}</span>
-                                        <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span> {{ $portfolio->settings->location }}</span>
+                                        <span class="col-md-10 col-xs-12"><span class="hidden-xs">:</span> {!! nl2br($portfolio->settings->location) !!}</span>
                                     </li>
                                 @endif
                                 <li class="row">

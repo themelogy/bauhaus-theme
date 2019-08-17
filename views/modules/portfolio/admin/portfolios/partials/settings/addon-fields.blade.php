@@ -6,7 +6,7 @@
 <div class="box-body">
     <div class="form-group{{ $errors->has("settings.location") ? ' has-error' : '' }}">
         {!! Form::label("settings.location", "Lokasyon".':') !!}
-        {!! Form::input('text', 'settings[location]', !isset($portfolio->settings->location) ? '' : $portfolio->settings->location, ['class'=>'form-control']) !!}
+        {!! Form::textarea('settings[location]', !isset($portfolio->settings->location) ? '' : $portfolio->settings->location, ['class'=>'form-control']) !!}
         {!! $errors->first("settings.location", '<span class="help-block">:message</span>') !!}
     </div>
 </div>

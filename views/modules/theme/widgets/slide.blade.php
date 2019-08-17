@@ -63,5 +63,5 @@
 
 @push('scripts')
     {!! Theme::script('plugins/rev-slider/js/jquery.revolution.min.js') !!}
-    {!! Theme::script('js/rev-slider-init.js') !!}
+    {!! Theme::script('js/rev-slider-init.js?v=1') !!}
 @endpush
