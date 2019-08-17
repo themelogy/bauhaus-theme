@@ -120,8 +120,15 @@ gulp.task('revolution.combine', function() {
         resource.asset.plugins + '/rev-slider/js/revolution.extension.slideanims.min.js',
         resource.asset.plugins + '/rev-slider/js/revolution.extension.video.min.js',
     ])
-        .pipe(minify())
         .pipe(concat('jquery.revolution.min.js'))
+        .pipe(gulp.dest(resource.asset.plugins + '/rev-slider/js'));
+});
+
+gulp.task('revolution.minify', ['revolution.combine'],function() {
+    return gulp.src([
+        resource.asset.plugins + '/rev-slider/js/jquery.revolution.min.js',
+    ])
+        .pipe(uglify())
         .pipe(gulp.dest(resource.asset.plugins + '/rev-slider/js'));
 });
 

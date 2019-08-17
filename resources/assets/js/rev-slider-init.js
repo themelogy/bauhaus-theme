@@ -37,7 +37,7 @@ if($('#rev_slider').length>0) {
       responsiveLevels: [2048, 1600, 1260, 992],
       gridwidth: [1370, 1100, 900, 700],
       gridheight: [800],
-      lazyType: "none",
+      lazyType: "smart",
       shadow: 0,
       spinner: "off",
       stopLoop: "on",

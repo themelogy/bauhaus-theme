@@ -1,7 +1,7 @@
 <div class="scroll-wrap">
     <div class="bg-changer">
         @foreach($portfolios as $portfolio)
-        <div class="section-bg" style="background-image: url('{{ $portfolio->present()->firstImage(1920,null,'resize',80)  }}')"></div>
+        <div class="section-bg lazy" data-src="{{ $portfolio->present()->firstImage(1920,null,'resize',80)  }}"></div>
         @endforeach
     </div>
     <div class="scrollable-content">

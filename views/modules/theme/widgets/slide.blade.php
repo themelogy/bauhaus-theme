@@ -65,27 +65,3 @@
     {!! Theme::script('plugins/rev-slider/js/jquery.revolution.min.js') !!}
     {!! Theme::script('js/rev-slider-init.js') !!}
 @endpush
-
-@push('backup')
-    <div class="slider-title tp-caption"
-         data-x="['left']" data-hoffset="['250', '50']"
-         data-y="['middle','middle','middle','middle']" data-voffset="['170']"
-         data-textAlign="['left']"
-         data-fontsize="['18']"
-         data-lineheight="['20']"
-         data-height="none"
-         data-whitespace="nowrap"
-         data-transform_idle="o:1;"
-         data-transform_in="x:[-105%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;"
-         data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
-         data-mask_in="x:50px;y:0px;s:inherit;e:inherit;"
-         data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;"
-         data-start="1500"
-         data-splitin="none"
-         data-splitout="none"
-         data-responsive_offset="on"
-         data-elementdelay="0.05" style="font-weight:600;">
-        <a href="{{ $slide->present()->link->url }}" class="link-arrow">@lang('themes::theme.buttons.project') <i class="icon ion-ios-arrow-thin-right"></i>
-        </a>
-    </div>
-@endpush
