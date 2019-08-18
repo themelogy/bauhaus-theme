@@ -1,10 +1,10 @@
 @stack('styles')
 @stack('css-inline')
 
-{!! Theme::script('js/vendors-min.js?v=1') !!}
+{!! Theme::script('js/vendors-min.js?v=10') !!}
 @stack('plugins')
 
-{!! Theme::script('js/scripts.min.js?v=1') !!}
+{!! Theme::script('js/scripts.min.js?v=10') !!}
 
 @stack('scripts')
 @stack('js-inline')

@@ -11,4 +11,4 @@
 <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
 
 @stack('head-styles')
-{!! Theme::style("css/style.css") !!}
+{!! Theme::style("css/style.css?v=10") !!}
