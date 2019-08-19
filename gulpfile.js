@@ -1,10 +1,10 @@
 'use strict';
+let status = 1;
 
 const gulp      = require('gulp'),
     shell       = require('gulp-shell'),
     sass        = require('gulp-sass'),
     clean       = require('gulp-clean'),
-    del         = require('del'),
     concat      = require('gulp-concat'),
     browserSync = require('browser-sync').create(),
     runSequence = require('run-sequence'),
@@ -14,7 +14,8 @@ const gulp      = require('gulp'),
     minifyCss   = require('gulp-minify-css'),
     merge       = require('merge-stream'),
     uglify      = require('gulp-uglify'),
-    themeInfo   = require('./theme.json');
+    themeInfo   = require('./theme.json'),
+    del         = require('del');
 
 let path, theme, assets, resource = {};
 
@@ -156,7 +157,7 @@ gulp.task('vendors.minify', ['vendors.combine'],function() {
 });
 
 gulp.task('clear-vendor', function(){
-    return del(resource.asset.vendor+"/**/*", {force: true});
+    if(status === 1) return del(resource.asset.vendor+"/**/*", {force: true});
 });
 
 gulp.task('vendor-copy', function () {
@@ -168,7 +169,7 @@ gulp.task('vendor-copy', function () {
 });
 
 gulp.task('scripts', function(){
-    del(resource.asset.js+'/scripts.min.js',{force:true});
+    if(status === 1) del(resource.asset.js+'/scripts.min.js',{force:true});
     return gulp.src(resource.asset.js+'/scripts.js')
         .pipe(minify({
             ext: {
@@ -188,7 +189,7 @@ gulp.task('scripts-copy', ['scripts'], function(){
 });
 
 gulp.task('clear-assets', function(){
-    return del(assets.path+"/**/*", {force: true});
+    if(status === 1) return del(assets.path+"/**/*", {force: true});
 });
 
 gulp.task('copy', ['clear-assets'], function () {
@@ -201,7 +202,7 @@ gulp.task('stylistPublish', function(){
 });
 
 gulp.task('clear-public', function(){
-    return del(theme.path+"/**/*", {force: true});
+    if(status === 1) return del(theme.path+"/**/*", {force: true});
 });
 
 gulp.task('production', ['clear-public'], function(){
