@@ -7,7 +7,7 @@
 
                 <!-- Main image-->
 
-                <img data-lazyload="{{ $slide->present()->firstImage(1920,1080,'fit',95) }}" data-bgparallax="5"  alt="{{ $slide->title }}" data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
+                <img data-lazyload="{{ $slide->present()->firstImage(1920,null,'resize',95) }}" data-bgparallax="5"  alt="{{ $slide->title }}" data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
 
                 <div class="slider-title tp-caption tp-resizeme category" style="padding: 20px 0;"
                      data-x="['left']" data-hoffset="['250', '250','250','50']"

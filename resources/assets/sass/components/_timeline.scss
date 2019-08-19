@@ -1,0 +1,53 @@
+$border-color: rgba(black, .3);
+
+.timeline {
+  padding: 0 10px;
+  overflow: auto;
+  height: 600px;
+  td {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+.timeline-item {
+  padding: 4em 2em 2em;
+  position: relative;
+  color: rgba(black, .7);
+  border-left: 2px solid $border-color;
+
+  p {
+    font-size: 1rem;
+  }
+
+  &::before {
+    content: attr(date-is);
+    position: absolute;
+    left: 1em;
+    font-weight: 500;
+    top: -0.55rem;
+    display: block;
+    font-size: 2rem;
+    color: $default-theme-color;
+  }
+
+  &::after {
+    width: 15px;
+    height: 15px;
+    display: block;
+    top: 1em;
+    position: absolute;
+    left: -8px;
+    border-radius: 10px;
+    content: '';
+    border: 2px solid $default-theme-color;
+    background: white;
+  }
+  &:last-child {
+    border-image: linear-gradient(
+                    to bottom,
+                    $border-color 60%,
+                    rgba($border-color, 0)) 1 100%
+  ;
+  }
+}
