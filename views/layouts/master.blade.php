@@ -1,4 +1,7 @@
-@php view()->composer('partials.header',\Themes\Bauhaus\Presenter\MenuModify::class); @endphp
+@php
+        view()->composer('partials.header',\Themes\Bauhaus\Presenter\MenuModify::class);
+        $version = 109;
+@endphp
 <!DOCTYPE HTML>
 <html lang="{{ LaravelLocalization::getCurrentLocale() }}">
 <head>

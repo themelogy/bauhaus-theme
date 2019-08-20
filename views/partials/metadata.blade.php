@@ -20,4 +20,4 @@
 </script>
 
 @stack('head-styles')
-{!! Theme::style("css/style.css?v=10") !!}
+{!! Theme::style("css/style.css?v=".$version) !!}
