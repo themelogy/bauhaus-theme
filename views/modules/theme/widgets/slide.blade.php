@@ -16,7 +16,7 @@
                      data-fontsize="['80', '75','70','65']"
                      data-lineheight="['75','70', '65','60']"
                      data-height="auto"
-                     data-width="['750', '700', '600', '500']"
+                     data-width="['750', '700', '650', '600']"
                      data-whitespace="normal"
                      data-transform_idle="o:1;"
                      data-transform_in="x:[-155%];z:0;rX:0deg;rY:0deg;rZ:0deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power2.easeInOut;"

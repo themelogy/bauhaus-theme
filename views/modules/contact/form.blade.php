@@ -1,7 +1,7 @@
-<a id="writeus" href="#contact_form" class="btn-upper btn-yellow btn">BİZE YAZIN</a> <a target="_blank" href="https://www.google.com/maps/dir/Current+Location/{{ setting('contact::contact-map-lat') }},{{ setting('contact::contact-map-lng') }}" class="btn-upper btn-yellow btn">YOL TARİFİ AL</a>
+<a id="writeus" href="#contact_form" class="btn-upper btn-yellow btn">@lang('themes::contact.write us')</a> <a target="_blank" href="https://www.google.com/maps/dir/Current+Location/{{ setting('contact::contact-map-lat') }},{{ setting('contact::contact-map-lng') }}" class="btn-upper btn-yellow btn">@lang('themes::contact.directions')</a>
 <div id="contact_form" class="m-top-20">
-    <h3 class="text-themecolor">{{ trans('themes::contact.form.title') }}</h3>
-    <p class="fs-sm-08">{{ trans('themes::contact.messages.info') }}</p>
+    <h3 class="text-themecolor m-bot-20">{{ trans('themes::contact.form.title') }}</h3>
+    {{--<p class="fs-sm-08">{{ trans('themes::contact.messages.info') }}</p>--}}
 
     <div class="alert alert-success" role="alert" v-show="success">
         @{{ successMessage }}
