@@ -40,10 +40,12 @@
                                         <div class="col-md-10 col-xs-12">{!! nl2br($portfolio->settings->location) !!}</div>
                                     </li>
                                 @endif
+                                @if(isset($portfolio->settings->start_at))
                                 <li class="row">
                                     <div class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.year') }}<span class="hidden-xs">:</span></div>
                                     <div class="col-md-10 col-xs-12">{{ $portfolio->start_at->formatLocalized('%Y') }}</div>
                                 </li>
+                                @endif
                                 @if($portfolio->categories()->exists())
                                     <li class="row">
                                         <div class="col-md-2 col-xs-12 text-bold">{{ trans('themes::portfolio.title.category') }}<span class="hidden-xs">:</span></div>

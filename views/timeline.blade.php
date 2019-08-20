@@ -10,9 +10,7 @@
             <section class="section about-info">
                 <div class="container">
                     <div class="timeline">
-                        <div class="wrap">
                         {!! $page->body !!}
-                        </div>
                     </div>
                 </div>
             </section>

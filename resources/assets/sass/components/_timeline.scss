@@ -1,17 +1,25 @@
-$border-color: rgba(black, .3);
+$border-color: rgba($default-theme-color, 1);
 
 .timeline {
-  padding: 0 10px;
-  overflow: auto;
-  height: 600px;
-  td {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+  //position: relative;
+  //padding: 0 10px;
+  //overflow: auto;
+  //height: 600px;
+  padding-left: 6em;
+  table {
+    tr {
+      background: #fff !important;
+    }
+    td {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      border-color: transparent !important;
+    }
   }
 }
 
 .timeline-item {
-  padding: 4em 2em 2em;
+  padding: 0 2em 2em;
   position: relative;
   color: rgba(black, .7);
   border-left: 2px solid $border-color;
@@ -23,7 +31,7 @@ $border-color: rgba(black, .3);
   &::before {
     content: attr(date-is);
     position: absolute;
-    left: 1em;
+    left: -3em;
     font-weight: 500;
     top: -0.55rem;
     display: block;
@@ -41,7 +49,7 @@ $border-color: rgba(black, .3);
     border-radius: 10px;
     content: '';
     border: 2px solid $default-theme-color;
-    background: white;
+    background: $default-theme-color;
   }
   &:last-child {
     border-image: linear-gradient(

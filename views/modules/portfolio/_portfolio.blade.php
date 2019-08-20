@@ -1,6 +1,6 @@
 <div class="grid-item {{ $portfolio->categories()->get()->implode('slug', ' ') }} js-isotope-item js-grid-item">
     <div class="project-item item-shadow">
-        <img alt="{{ $portfolio->title }}" class="img-responsive" src="{{ $portfolio->present()->firstImage(426,300,'fit',80) }}">
+        <img alt="{{ $portfolio->title }}" class="img-responsive" src="{{ $portfolio->present()->firstImage(426,300,'fit',70) }}">
         <div class="project-hover">
             <div class="project-hover-content">
                 <h3 class="project-title">{{ $portfolio->title }}</h3>

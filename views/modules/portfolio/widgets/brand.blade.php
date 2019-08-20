@@ -12,7 +12,7 @@
                                     <ul class="partners">
                                         @foreach($brands as $brand)
                                             <li class="partner">
-                                                <img class="img-responsive" alt="{{ $brand->title }}" src="{{ $brand->present()->firstImage(null,90,'resize',100) }}">
+                                                <img class="img-responsive lazy" alt="{{ $brand->title }}" data-src="{{ $brand->present()->firstImage(null,90,'resize',50) }}">
                                             </li>
                                         @endforeach
                                     </ul>
